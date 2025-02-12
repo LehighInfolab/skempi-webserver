@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/skempi-webserver/static/css/main.62d9a858.css",
+    "main.js": "/skempi-webserver/static/js/main.920b6057.js",
+    "static/js/453.8ab44547.chunk.js": "/skempi-webserver/static/js/453.8ab44547.chunk.js",
+    "index.html": "/skempi-webserver/index.html",
+    "main.62d9a858.css.map": "/skempi-webserver/static/css/main.62d9a858.css.map",
+    "main.920b6057.js.map": "/skempi-webserver/static/js/main.920b6057.js.map",
+    "453.8ab44547.chunk.js.map": "/skempi-webserver/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62d9a858.css",
+    "static/js/main.920b6057.js"
+  ]
+}
