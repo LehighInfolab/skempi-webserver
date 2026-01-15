@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="home">
             <section className="hero">
-                <h1>Welcome to SMAPIE Database</h1>
+                <h1>Welcome to the SKEMPI2Mech Dataset</h1>
                 <p className="subtitle">
                     Explore structural and mechanistic annotations of protein interactions
                 </p>
@@ -37,9 +37,9 @@ const Home = () => {
             </section>
 
             {/* <section className="about">
-                <h2>About SMAPIE</h2>
+                <h2>About SKEMPI2Mech</h2>
                 <p>
-                    SMAPIE is a comprehensive database providing structural and mechanistic
+                    SKEMPI2Mech is a comprehensive database providing structural and mechanistic
                     annotations for protein interactions. Our goal is to facilitate research
                     in protein engineering and drug discovery.
                 </p>

@@ -13,9 +13,9 @@ function App() {
       <div className="App">
         <nav className="navbar">
           <div className="nav-brand">
-            <Link to="/">SMAPIE</Link>
+            <Link to="/">SKEMPI2Mech</Link>
             <div className="nav-brand-subtitle">
-              <span className="brand-letter">S</span>tructural and <span className="brand-letter">M</span>echanistic <span className="brand-letter">A</span>nnotations of <span className="brand-letter">P</span>rotein <span className="brand-letter">I</span>nteractions with <span className="brand-letter">E</span>xplainability
+              Structural and mechanistic annotations of SKEMPI 2.0 protein interactions
             </div>
           </div>
           <ul className="nav-links">

@@ -51,7 +51,7 @@ const Download = () => {
 
             <section className="download-section">
                 <h3>Complete Dataset</h3>
-                <p>Download the complete SMAPIE database in CSV format.</p>
+                <p>Download the complete SKEMPI2Mech dataset in CSV format.</p>
                 <button
                     onClick={handleDownloadCSV}
                     disabled={downloadingCSV}

@@ -5,6 +5,13 @@ const DataTable = ({ data, loading, pagination, onPageChange }) => {
     if (!data?.length) return <div>No data found</div>;
 
     const columns = ['pdb', 'mutation', 'mechanism', 'source', 'rowData'];
+    const columnLabels = {
+        pdb: 'PDB ID',
+        mutation: 'Mutation',
+        mechanism: 'Mechanism',
+        source: 'Source',
+        rowData: 'Supporting Text'
+    };
 
     return (
         <div className="data-table-container">
@@ -13,7 +20,7 @@ const DataTable = ({ data, loading, pagination, onPageChange }) => {
                     <tr>
                         {columns.map(column => (
                             <th key={column}>
-                                {column.charAt(0).toUpperCase() + column.slice(1)}
+                                {columnLabels[column] || (column.charAt(0).toUpperCase() + column.slice(1))}
                             </th>
                         ))}
                     </tr>

@@ -207,6 +207,59 @@
   padding: 2rem;
 }
 
+.statistics-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statistics-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow);
+}
+
+.statistics-section h3,
+.statistics-section h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.statistics-section p {
+  color: var(--light-text);
+  line-height: 1.7;
+}
+
+.statistics-figure {
+  margin: 1.5rem 0;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.statistics-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.statistics-details {
+  margin-top: 1.5rem;
+}
+
+.statistics-pre {
+  background: #0b1020;
+  color: #e6edf3;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: auto;
+  font-size: 0.9rem;
+}
+
 .download-section {
   background: white;
   border-radius: 12px;
