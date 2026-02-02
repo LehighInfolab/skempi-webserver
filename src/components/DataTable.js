@@ -20,7 +20,7 @@ const DataTable = ({ data, loading, pagination, onPageChange }) => {
                     <tr>
                         {columns.map(column => (
                             <th key={column}>
-                                {columnLabels[column] || (column.charAt(0).toUpperCase() + column.slice(1))}
+                                {columnLabels[column]}
                             </th>
                         ))}
                     </tr>
