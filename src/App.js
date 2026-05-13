@@ -9,7 +9,7 @@ import './styles/styles.css';
 
 function App() {
   return (
-    <Router basename="/skempi-webserver">
+    <Router>
       <div className="App">
         <nav className="navbar">
           <div className="nav-brand">

@@ -1,4 +1,4 @@
-export const CSV_URL = 'data/Final_quotes.csv';
+export const CSV_URL = '/data/Final_quotes.csv';
 
 const DELIMITER = '|||';
 let cached = null;
