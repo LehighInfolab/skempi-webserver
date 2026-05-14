@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/skempi-webserver/static/css/main.de197970.css",
-    "main.js": "/skempi-webserver/static/js/main.ddc97463.js",
-    "static/js/453.8ab44547.chunk.js": "/skempi-webserver/static/js/453.8ab44547.chunk.js",
+    "main.js": "/skempi-webserver/static/js/main.38c39bff.js",
+    "static/js/453.e7caf3e0.chunk.js": "/skempi-webserver/static/js/453.e7caf3e0.chunk.js",
     "index.html": "/skempi-webserver/index.html",
     "main.de197970.css.map": "/skempi-webserver/static/css/main.de197970.css.map",
-    "main.ddc97463.js.map": "/skempi-webserver/static/js/main.ddc97463.js.map",
-    "453.8ab44547.chunk.js.map": "/skempi-webserver/static/js/453.8ab44547.chunk.js.map"
+    "main.38c39bff.js.map": "/skempi-webserver/static/js/main.38c39bff.js.map",
+    "453.e7caf3e0.chunk.js.map": "/skempi-webserver/static/js/453.e7caf3e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de197970.css",
-    "static/js/main.ddc97463.js"
+    "static/js/main.38c39bff.js"
   ]
 }
