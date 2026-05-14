@@ -2,7 +2,7 @@
 
 Structural and mechanistic annotations of SKEMPI 2.0 protein interactions.
 
-Live site: **https://skempi2mech.vercel.app**
+Live site: **https://lehighinfolab.github.io/skempi-webserver**
 
 ## Project structure
 
@@ -10,6 +10,7 @@ Live site: **https://skempi2mech.vercel.app**
 ├── public/
 │   ├── data/
 │   │   └── Final_quotes.csv   # dataset (static asset, fetched at runtime)
+│   ├── 404.html               # GitHub Pages SPA routing fallback
 │   └── index.html
 ├── src/
 │   ├── components/
@@ -23,7 +24,6 @@ Live site: **https://skempi2mech.vercel.app**
 │   │   ├── Home.js
 │   │   └── Statistics.js
 │   └── App.js
-├── vercel.json                 # SPA fallback routing
 └── package.json
 ```
 
@@ -36,22 +36,58 @@ npm start
 
 Opens at `http://localhost:3000`. The full CSV is fetched and parsed in the browser on first visit to Browse (~2 k rows); search and pagination are instant after that.
 
-## Production build
+## Deploying to GitHub Pages
+
+### First-time setup
+
+1. **Create the GitHub repo** (e.g. `lehighinfolab/skempi-webserver`).
+
+2. **If the repo name differs** from `skempi-webserver`, update two places before deploying:
+   - `"homepage"` in `package.json` → `https://<org>.github.io/<repo-name>`
+   - `basename` in `src/App.js` → `"/<repo-name>"`
+
+3. **Install dependencies** (includes `gh-pages`):
+   ```bash
+   npm install
+   ```
+
+4. **Push your code** to the `main` branch:
+   ```bash
+   git add .
+   git commit -m "initial commit"
+   git remote add origin https://github.com/lehighinfolab/skempi-webserver.git
+   git push -u origin main
+   ```
+
+5. **Deploy** (builds the app and pushes to the `gh-pages` branch):
+   ```bash
+   npm run deploy
+   ```
+
+6. **Enable GitHub Pages** in the repo settings:
+   - Go to **Settings → Pages**
+   - Source: **Deploy from a branch**
+   - Branch: `gh-pages` / folder: `/ (root)`
+   - Click **Save**
+
+The site will be live at `https://lehighinfolab.github.io/skempi-webserver` within a minute or two.
+
+### Subsequent deployments
+
+Any time you update the code, run:
 
 ```bash
-npm run build
+npm run deploy
 ```
 
-Output goes to `build/`. Vercel runs this automatically on deploy — no manual build step needed.
+This rebuilds and pushes to `gh-pages`. The `main` branch is not deployed automatically — only the output of `npm run deploy` goes live.
 
-## Deploying to Vercel
+## How client-side routing works on GitHub Pages
 
-1. Push this repo to GitHub.
-2. Go to [vercel.com](https://vercel.com) → **Add New Project** → import the repo.
-3. Vercel auto-detects Create React App. Leave all settings at defaults (build command `npm run build`, output `build`).
-4. Click **Deploy**.
+GitHub Pages serves static files and returns a 404 for any path it doesn't recognize (e.g. `/skempi-webserver/browse`). Two files work together to fix this:
 
-`vercel.json` at the repo root handles client-side routing so that direct links to `/browse`, `/statistics`, etc. work correctly.
+- `public/404.html` — GitHub Pages serves this on any unmatched path; it immediately redirects back to `index.html` while encoding the original path in the query string.
+- `public/index.html` — contains a script that reads the encoded path and restores it with `history.replaceState` before React loads, so React Router sees the correct URL.
 
 ## Dataset
 
